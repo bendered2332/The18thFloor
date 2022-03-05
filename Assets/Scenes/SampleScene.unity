@@ -4647,29 +4647,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045817129}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24ff430e37ec6484db63e62dc6c0c720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acceleration: 0.1
-  deceleration: 0.5
---- !u!114 &1045817133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045817129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b3dd5d488ba92479d42375135c2108, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c5564b119ddddf42b332fcdaf536c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: 2
   deceleration: 2
-  maximumWalkVelocity: 0.5
-  maximumRunVelocity: 2
 --- !u!1 &1058460958
 GameObject:
   m_ObjectHideFlags: 0
