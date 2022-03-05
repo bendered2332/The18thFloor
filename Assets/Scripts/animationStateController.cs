@@ -5,40 +5,44 @@ using UnityEngine;
 public class animationStateController : MonoBehaviour
 {
 
+
+  //int isWalkingHash;
+  //int isRunningHash;
   Animator animator;
-  int isWalkingHash;
-  int isRunningHash;
+  float velocity = 0.0f;
+  public float acceleration = 0.1f;
+  public float deceleration = 0.5f;
+  int VelocitHash;
   void Start()
   {
     animator = GetComponent<Animator>();
-    isWalkingHash = Animator.StringToHash("isWalking");
-    isRunningHash = Animator.StringToHash("isRunning");
+    //isWalkingHash = Animator.StringToHash("isWalking");
+    //isRunningHash = Animator.StringToHash("isRunning");
+    VelocitHash = Animator.StringToHash("Velocity");
   }
 
   // Update is called once per frame
   void Update()
   {
 
-    bool isRunning = animator.GetBool(isRunningHash);
-    bool isWalking = animator.GetBool(isWalkingHash);
+    //bool isRunning = animator.GetBool(isRunningHash);
+    //bool isWalking = animator.GetBool(isWalkingHash);
     bool forwardPressed = Input.GetKey("w");
     bool runPressed = Input.GetKey("left shift");
 
-    if (!isWalking && forwardPressed)
+    if (forwardPressed && velocity < 1.0f)
     {
-      animator.SetBool(isWalkingHash, true);
+      velocity += Time.deltaTime * acceleration;
     }
-    if (isWalking && !forwardPressed)
+    if (!forwardPressed && velocity > 0.0f)
     {
-      animator.SetBool(isWalkingHash, false);
+      velocity -= Time.deltaTime * deceleration;
     }
-    if (!isRunning && (forwardPressed && runPressed))
+    if (!forwardPressed && velocity < 0.0f)
     {
-      animator.SetBool(isRunningHash, true);
+      velocity = 0.0f;
     }
-    if (isRunning && (!forwardPressed || !runPressed))
-    {
-      animator.SetBool(isRunningHash, false);
-    }
+    animator.SetFloat(VelocitHash, velocity);
+
   }
 }
