@@ -154,10 +154,10 @@ public class TwoDBlendTreeAnimationStateController : MonoBehaviour
   {
     // input will be true if the player is pressing on the passed in key parameter
     // get key input from player
-    bool forwardPressed = Input.GetKey(KeyCode.W);
-    bool leftPressed = Input.GetKey(KeyCode.A);
-    bool rightPressed = Input.GetKey(KeyCode.D);
-    bool runPressed = Input.GetKey(KeyCode.LeftShift);
+    bool forwardPressed = Input.GetKey("w");
+    bool leftPressed = Input.GetKey("a");
+    bool rightPressed = Input.GetKey("d");
+    bool runPressed = Input.GetKey("left shift");
 
     // set current max velocity
     float currentMaxVelocity = runPressed ? maximumRunVelocity : maximumWalkVelocity;
