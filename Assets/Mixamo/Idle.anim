@@ -3305,7 +3305,6 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-<<<<<<< HEAD
     genericBindings:
     - serializedVersion: 2
       path: 4049544122
@@ -4014,9 +4013,6 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
-=======
-    genericBindings: []
->>>>>>> parent of 9d2a9f0 (End of re-targeting tutorial)
     pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
