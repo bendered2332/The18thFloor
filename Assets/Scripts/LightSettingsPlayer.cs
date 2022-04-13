@@ -22,37 +22,55 @@ public class LightSettingsPlayer : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    if (Input.GetKeyDown(KeyCode.N))
+    if (SaveScript.BatteryPower > 0.0f)
     {
-      if (NightVisionActive == false)
+      if (Input.GetKeyDown(KeyCode.N))
       {
-        MyVolume.profile = NightVision;
-        NightVisionActive = true;
-        NightVisionOverlay.gameObject.SetActive(true);
+        if (NightVisionActive == false)
+        {
+          MyVolume.profile = NightVision;
+          NightVisionActive = true;
+          NightVisionOverlay.gameObject.SetActive(true);
+          SaveScript.NVLightOn = true;
+        }
+        else
+        {
+          MyVolume.profile = Standard;
+          NightVisionActive = false;
+          NightVisionOverlay.gameObject.SetActive(false); SaveScript.NVLightOn = false;
+
+        }
       }
-      else
+
+
+      if (Input.GetKeyDown(KeyCode.F))
       {
-        MyVolume.profile = Standard;
-        NightVisionActive = false;
-        NightVisionOverlay.gameObject.SetActive(false);
+        if (FlashlightActive == false)
+        {
+
+          FlashlightActive = true;
+          Flashlight.gameObject.SetActive(true);
+          SaveScript.FlashLightOn = true;
+        }
+        else
+        {
+
+          FlashlightActive = false;
+          Flashlight.gameObject.SetActive(false);
+          SaveScript.FlashLightOn = false;
+        }
       }
     }
 
-
-    if (Input.GetKeyDown(KeyCode.F))
+    if (SaveScript.BatteryPower <= 0.0f)
     {
-      if (FlashlightActive == false)
-      {
+      MyVolume.profile = Standard;
+      NightVisionActive = false;
+      NightVisionOverlay.gameObject.SetActive(false); SaveScript.NVLightOn = false;
 
-        FlashlightActive = true;
-        Flashlight.gameObject.SetActive(true);
-      }
-      else
-      {
-
-        FlashlightActive = false;
-        Flashlight.gameObject.SetActive(false);
-      }
+      FlashlightActive = false;
+      Flashlight.gameObject.SetActive(false);
+      SaveScript.FlashLightOn = false;
     }
   }
 }
