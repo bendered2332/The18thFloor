@@ -35,6 +35,18 @@ public class Inventory : MonoBehaviour
   [SerializeField] GameObject BatteryImage4;
   [SerializeField] GameObject BatteryButton4;
 
+  //Weapons
+  [SerializeField] GameObject KnifeImage;
+  [SerializeField] GameObject KnifeButton;
+  [SerializeField] GameObject BatImage;
+  [SerializeField] GameObject BatButton;
+  [SerializeField] GameObject AxeImage;
+  [SerializeField] GameObject AxeButton;
+  [SerializeField] GameObject GunImage;
+  [SerializeField] GameObject GunButton;
+  [SerializeField] GameObject CrossbowImage;
+  [SerializeField] GameObject CrossbowButton;
+
   // Start is called before the first frame update
   void Start()
   {
@@ -66,6 +78,18 @@ public class Inventory : MonoBehaviour
     BatteryButton3.gameObject.SetActive(false);
     BatteryImage4.gameObject.SetActive(false);
     BatteryButton4.gameObject.SetActive(false);
+
+    //Weapons
+    KnifeImage.gameObject.SetActive(false);
+    KnifeButton.gameObject.SetActive(false);
+    BatImage.gameObject.SetActive(false);
+    BatButton.gameObject.SetActive(false);
+    AxeImage.gameObject.SetActive(false);
+    AxeButton.gameObject.SetActive(false);
+    GunImage.gameObject.SetActive(false);
+    GunButton.gameObject.SetActive(false);
+    CrossbowImage.gameObject.SetActive(false);
+    CrossbowButton.gameObject.SetActive(false);
   }
 
   // Update is called once per frame
@@ -257,6 +281,10 @@ public class Inventory : MonoBehaviour
     }
   }
 
+  void WeaponUpdate()
+  {
+
+  }
   public void HealthUpdate()
   {
     if (SaveScript.PlayerHealth < 100)

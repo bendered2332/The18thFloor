@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Apple
   - Battery
+  - Knife
+  - Axe
+  - Gun
+  - Bat
+  - CrossBow
   layers:
   - Default
   - TransparentFX
