@@ -18,4 +18,7 @@ public class SaveScript : MonoBehaviour
   public static bool Axe = false;
   public static bool Gun = false;
   public static bool Crossbow = false;
+  public static bool RoomKey = false;
+  public static int Magazines = 0;
+  public static int Bolts = 0;
 }

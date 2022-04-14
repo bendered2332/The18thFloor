@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -47,6 +48,21 @@ public class Inventory : MonoBehaviour
   [SerializeField] GameObject CrossbowImage;
   [SerializeField] GameObject CrossbowButton;
 
+  //Ammo
+  [SerializeField] GameObject MagazineIcon1;
+  [SerializeField] GameObject MagazineButton1;
+  [SerializeField] GameObject MagazineIcon2;
+  [SerializeField] GameObject MagazineButton2;
+  [SerializeField] GameObject MagazineIcon3;
+  [SerializeField] GameObject MagazineButton3;
+  [SerializeField] GameObject MagazineIcon4;
+  [SerializeField] GameObject MagazineButton4;
+  [SerializeField] GameObject CrossbowBoltsIcon;
+  [SerializeField] GameObject CrossbowBoltsButton;
+
+  //Key
+  [SerializeField] GameObject RoomKeyIcon;
+
   // Start is called before the first frame update
   void Start()
   {
@@ -90,6 +106,21 @@ public class Inventory : MonoBehaviour
     GunButton.gameObject.SetActive(false);
     CrossbowImage.gameObject.SetActive(false);
     CrossbowButton.gameObject.SetActive(false);
+
+    //Key
+    RoomKeyIcon.gameObject.SetActive(false);
+
+    //Ammo
+    MagazineIcon1.gameObject.SetActive(false);
+    MagazineButton1.gameObject.SetActive(false);
+    MagazineIcon2.gameObject.SetActive(false);
+    MagazineButton2.gameObject.SetActive(false);
+    MagazineIcon3.gameObject.SetActive(false);
+    MagazineButton3.gameObject.SetActive(false);
+    MagazineIcon4.gameObject.SetActive(false);
+    MagazineButton4.gameObject.SetActive(false);
+    CrossbowBoltsIcon.gameObject.SetActive(false);
+    CrossbowBoltsButton.gameObject.SetActive(false);
   }
 
   // Update is called once per frame
@@ -113,7 +144,96 @@ public class Inventory : MonoBehaviour
       }
     }
     CheckInventory();
+    CheckWeapons();
+    CheckMagazines();
+    CheckBolts();
+    CheckKey();
   }
+
+  void CheckKey()
+  {
+    if (SaveScript.RoomKey == true)
+    {
+      RoomKeyIcon.gameObject.SetActive(true);
+
+    }
+  }
+
+  void CheckBolts()
+  {
+    if (SaveScript.Bolts == 0)
+    {
+      CrossbowBoltsIcon.gameObject.SetActive(false);
+      CrossbowBoltsButton.gameObject.SetActive(false);
+    }
+    if (SaveScript.Bolts == 1)
+    {
+      CrossbowBoltsIcon.gameObject.SetActive(true);
+      CrossbowBoltsButton.gameObject.SetActive(true);
+    }
+  }
+
+  void CheckMagazines()
+  {
+    //Magazines
+    if (SaveScript.Magazines == 0)
+    {
+      MagazineIcon1.gameObject.SetActive(false);
+      MagazineButton1.gameObject.SetActive(false);
+      MagazineIcon2.gameObject.SetActive(false);
+      MagazineButton2.gameObject.SetActive(false);
+      MagazineIcon3.gameObject.SetActive(false);
+      MagazineButton3.gameObject.SetActive(false);
+      MagazineIcon4.gameObject.SetActive(false);
+      MagazineButton4.gameObject.SetActive(false);
+
+    }
+    if (SaveScript.Magazines == 1)
+    {
+      MagazineIcon1.gameObject.SetActive(true);
+      MagazineButton1.gameObject.SetActive(true);
+      MagazineIcon2.gameObject.SetActive(false);
+      MagazineButton2.gameObject.SetActive(false);
+      MagazineIcon3.gameObject.SetActive(false);
+      MagazineButton3.gameObject.SetActive(false);
+      MagazineIcon4.gameObject.SetActive(false);
+      MagazineButton4.gameObject.SetActive(false);
+    }
+    if (SaveScript.Magazines == 2)
+    {
+      MagazineIcon1.gameObject.SetActive(true);
+      MagazineButton1.gameObject.SetActive(false);
+      MagazineIcon2.gameObject.SetActive(true);
+      MagazineButton2.gameObject.SetActive(true);
+      MagazineIcon3.gameObject.SetActive(false);
+      MagazineButton3.gameObject.SetActive(false);
+      MagazineIcon4.gameObject.SetActive(false);
+      MagazineButton4.gameObject.SetActive(false);
+    }
+    if (SaveScript.Magazines == 3)
+    {
+      MagazineIcon1.gameObject.SetActive(true);
+      MagazineButton1.gameObject.SetActive(false);
+      MagazineIcon2.gameObject.SetActive(true);
+      MagazineButton2.gameObject.SetActive(false);
+      MagazineIcon3.gameObject.SetActive(true);
+      MagazineButton3.gameObject.SetActive(true);
+      MagazineIcon4.gameObject.SetActive(false);
+      MagazineButton4.gameObject.SetActive(false);
+    }
+    if (SaveScript.Magazines == 4)
+    {
+      MagazineIcon1.gameObject.SetActive(true);
+      MagazineButton1.gameObject.SetActive(false);
+      MagazineIcon2.gameObject.SetActive(true);
+      MagazineButton2.gameObject.SetActive(false);
+      MagazineIcon3.gameObject.SetActive(true);
+      MagazineButton3.gameObject.SetActive(false);
+      MagazineIcon4.gameObject.SetActive(true);
+      MagazineButton4.gameObject.SetActive(true);
+    }
+  }
+
   void CheckInventory()
   {
     //Apples
@@ -281,9 +401,33 @@ public class Inventory : MonoBehaviour
     }
   }
 
-  void WeaponUpdate()
+  void CheckWeapons()
   {
-
+    if (SaveScript.Knife == true)
+    {
+      KnifeImage.gameObject.SetActive(true);
+      KnifeButton.gameObject.SetActive(true);
+    }
+    if (SaveScript.Bat == true)
+    {
+      BatImage.gameObject.SetActive(true);
+      BatButton.gameObject.SetActive(true);
+    }
+    if (SaveScript.Axe == true)
+    {
+      AxeImage.gameObject.SetActive(true);
+      AxeButton.gameObject.SetActive(true);
+    }
+    if (SaveScript.Gun == true)
+    {
+      GunImage.gameObject.SetActive(true);
+      GunButton.gameObject.SetActive(true);
+    }
+    if (SaveScript.Crossbow == true)
+    {
+      CrossbowImage.gameObject.SetActive(true);
+      CrossbowButton.gameObject.SetActive(true);
+    }
   }
   public void HealthUpdate()
   {

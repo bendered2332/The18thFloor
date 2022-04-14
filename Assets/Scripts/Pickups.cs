@@ -51,29 +51,113 @@ public class Pickups : MonoBehaviour
           }
         }
       }
+      else if (hit.transform.tag == "Magazine")
+      {
+        CanSeePickup = true;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+          if (SaveScript.Magazines < 4)
+          {
+            Destroy(hit.transform.gameObject);
+            SaveScript.Magazines += 1;
+            MyPlayer.Play();
+          }
+        }
+      }
+      else if (hit.transform.tag == "Bolt")
+      {
+        CanSeePickup = true;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+          if (SaveScript.Bolts < 1)
+          {
+            Destroy(hit.transform.gameObject);
+            SaveScript.Bolts += 1;
+            MyPlayer.Play();
+          }
+        }
+      }
+      else if (hit.transform.tag == "RoomKey")
+      {
+        CanSeePickup = true;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+          if (SaveScript.RoomKey == false)
+          {
+            Destroy(hit.transform.gameObject);
+            SaveScript.RoomKey = true;
+            MyPlayer.Play();
+          }
+        }
+      }
       else if (hit.transform.tag == "Knife")
       {
         CanSeePickup = true;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+          if (SaveScript.Knife == false)
+          {
+            Destroy(hit.transform.gameObject);
+            SaveScript.Knife = true;
+            MyPlayer.Play();
+          }
+        }
 
       }
       else if (hit.transform.tag == "Axe")
       {
         CanSeePickup = true;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+          if (SaveScript.Axe == false)
+          {
+            Destroy(hit.transform.gameObject);
+            SaveScript.Axe = true;
+            MyPlayer.Play();
+          }
+        }
 
       }
       else if (hit.transform.tag == "Bat")
       {
         CanSeePickup = true;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+          if (SaveScript.Bat == false)
+          {
+            Destroy(hit.transform.gameObject);
+            SaveScript.Bat = true;
+            MyPlayer.Play();
+          }
+        }
 
       }
       else if (hit.transform.tag == "Gun")
       {
         CanSeePickup = true;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+          if (SaveScript.Gun == false)
+          {
+            Destroy(hit.transform.gameObject);
+            SaveScript.Gun = true;
+            MyPlayer.Play();
+          }
+        }
 
       }
       else if (hit.transform.tag == "CrossBow")
       {
         CanSeePickup = true;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+          if (SaveScript.Crossbow == false)
+          {
+            Destroy(hit.transform.gameObject);
+            SaveScript.Crossbow = true;
+            MyPlayer.Play();
+          }
+        }
 
       }
       else
