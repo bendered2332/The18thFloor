@@ -217,7 +217,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48128995}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
@@ -241,6 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Distance: 6
   PickupMessage: {fileID: 1973675861}
+  PlayerArms: {fileID: 1953049835}
 --- !u!82 &48129004
 AudioSource:
   m_ObjectHideFlags: 0
@@ -337,6 +338,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &57526318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1717991288866742, guid: 1c3945bda9991a64bb0a8ee9ea89a37c, type: 3}
+  m_PrefabInstance: {fileID: 1908374769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &57892987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1166,7 +1172,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 264044901}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1759552051}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: AssignBat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &264044901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3678,7 +3696,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 761677543}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1759552051}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: AssignAxe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &761677543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6571,6 +6601,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2733a29365918d844bf71e1132dc91d7, type: 3}
+--- !u!1 &1538356214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3432872803860989867, guid: c528221e665f1ba4ca98aae41b5ae8ce, type: 3}
+  m_PrefabInstance: {fileID: 656226796}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1582196110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6709,7 +6744,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1585936535}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1759552051}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: AssignKnife
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1585936535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7153,7 +7200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1759552045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7286,6 +7333,11 @@ MonoBehaviour:
   InventoryMenu: {fileID: 125365812}
   AppleBite: {fileID: 8300000, guid: 6c15f5ae7bc1cbe4381a3c3e362f7626, type: 3}
   BatteryChange: {fileID: 8300000, guid: fea60389b834443f28cfd0cc3b732f25, type: 3}
+  WeaponChange: {fileID: 8300000, guid: 2025a889b1a4446a5991c081b7dfae5b, type: 3}
+  PlayerArms: {fileID: 1953049835}
+  Knife: {fileID: 2094109893}
+  Bat: {fileID: 1538356214}
+  Axe: {fileID: 57526318}
   AppleImage1: {fileID: 1110642017}
   AppleButton1: {fileID: 508672761}
   AppleImage2: {fileID: 1455957936}
@@ -7933,6 +7985,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HRR_Axe_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1717991288866742, guid: 1c3945bda9991a64bb0a8ee9ea89a37c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4900444789763622, guid: 1c3945bda9991a64bb0a8ee9ea89a37c, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -8197,6 +8253,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1953049835 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: df304e48fe5935a41a126798382b0a21, type: 3}
+  m_PrefabInstance: {fileID: 299850580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1953049837
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953049835}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e7cbb12d2a329c440ae7055934db68ed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1973675861
 GameObject:
   m_ObjectHideFlags: 0
@@ -10911,6 +10991,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d670c9d2dc32e9488c9e429345bdead, type: 3}
+--- !u!1 &2094109893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1142442885390036, guid: 7df8587eae91f654cb0590fbd224f809, type: 3}
+  m_PrefabInstance: {fileID: 460505604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2129681963
 GameObject:
   m_ObjectHideFlags: 0

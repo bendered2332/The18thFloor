@@ -11,6 +11,15 @@ public class Inventory : MonoBehaviour
   private AudioSource MyPlayer;
   [SerializeField] AudioClip AppleBite;
   [SerializeField] AudioClip BatteryChange;
+  [SerializeField] AudioClip WeaponChange;
+  [SerializeField] GameObject PlayerArms;
+  [SerializeField] GameObject Knife;
+  [SerializeField] GameObject Bat;
+  [SerializeField] GameObject Axe;
+  [SerializeField] GameObject Gun;
+  [SerializeField] GameObject Crossbow;
+
+
 
   //Apples
   [SerializeField] GameObject AppleImage1;
@@ -452,5 +461,50 @@ public class Inventory : MonoBehaviour
     SaveScript.Batteries -= 1;
     MyPlayer.clip = BatteryChange;
     MyPlayer.Play();
+  }
+
+  public void AssignKnife()
+  {
+    PlayerArms.gameObject.SetActive(true);
+    Knife.gameObject.SetActive(true);
+    MyPlayer.clip = WeaponChange;
+    MyPlayer.Play();
+  }
+  public void AssignBat()
+  {
+    PlayerArms.gameObject.SetActive(true);
+    Bat.gameObject.SetActive(true);
+    MyPlayer.clip = WeaponChange;
+    MyPlayer.Play();
+  }
+  public void AssignAxe()
+  {
+    PlayerArms.gameObject.SetActive(true);
+    Axe.gameObject.SetActive(true);
+    MyPlayer.clip = WeaponChange;
+    MyPlayer.Play();
+  }
+  public void AssignGun()
+  {
+    PlayerArms.gameObject.SetActive(true);
+    Gun.gameObject.SetActive(true);
+    MyPlayer.clip = WeaponChange;
+    MyPlayer.Play();
+  }
+  public void AssignCrossbow()
+  {
+    PlayerArms.gameObject.SetActive(true);
+    Crossbow.gameObject.SetActive(true);
+    MyPlayer.clip = WeaponChange;
+    MyPlayer.Play();
+  }
+
+  public void WeaponsOff()
+  {
+    Axe.gameObject.SetActive(false);
+    Bat.gameObject.SetActive(false);
+    Knife.gameObject.SetActive(false);
+    Gun.gameObject.SetActive(false);
+    Crossbow.gameObject.SetActive(false);
   }
 }
