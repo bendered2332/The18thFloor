@@ -11,6 +11,9 @@ TagManager:
   - Gun
   - Bat
   - CrossBow
+  - Magazine
+  - Bolt
+  - RoomKey
   layers:
   - Default
   - TransparentFX
