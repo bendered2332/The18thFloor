@@ -13287,7 +13287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1759552045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13422,12 +13422,15 @@ MonoBehaviour:
   AppleBite: {fileID: 8300000, guid: 6c15f5ae7bc1cbe4381a3c3e362f7626, type: 3}
   BatteryChange: {fileID: 8300000, guid: fea60389b834443f28cfd0cc3b732f25, type: 3}
   WeaponChange: {fileID: 8300000, guid: 2025a889b1a4446a5991c081b7dfae5b, type: 3}
+  GunShot: {fileID: 8300000, guid: d36bfe1dc6cabb649b1542a29b25697d, type: 3}
+  ArrowShot: {fileID: 8300000, guid: 34996a4fc8ccb254781b91a9f1158421, type: 3}
   PlayerArms: {fileID: 1953049835}
   Knife: {fileID: 2094109893}
   Bat: {fileID: 1538356214}
   Axe: {fileID: 57526318}
   Gun: {fileID: 7757947125248051480}
   Crossbow: {fileID: 374312492}
+  Anim: {fileID: 1953049837}
   AppleImage1: {fileID: 1110642017}
   AppleButton1: {fileID: 508672761}
   AppleImage2: {fileID: 1455957936}
@@ -15107,6 +15110,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1953049838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953049835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ed9e5405450144aacfdf5c0d64d6f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1956854830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1767670405517586680, guid: 5f0046a5ffe3212439d6b6007ae70305, type: 3}

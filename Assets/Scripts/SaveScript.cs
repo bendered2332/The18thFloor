@@ -21,4 +21,9 @@ public class SaveScript : MonoBehaviour
   public static bool RoomKey = false;
   public static int Magazines = 0;
   public static int Bolts = 0;
+  public static bool HaveKnife = false;
+  public static bool HaveBat = false;
+
+  public static bool HaveAxe = false;
+
 }

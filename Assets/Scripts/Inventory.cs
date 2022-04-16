@@ -12,12 +12,17 @@ public class Inventory : MonoBehaviour
   [SerializeField] AudioClip AppleBite;
   [SerializeField] AudioClip BatteryChange;
   [SerializeField] AudioClip WeaponChange;
+  [SerializeField] AudioClip GunShot;
+  [SerializeField] AudioClip ArrowShot;
   [SerializeField] GameObject PlayerArms;
   [SerializeField] GameObject Knife;
   [SerializeField] GameObject Bat;
   [SerializeField] GameObject Axe;
   [SerializeField] GameObject Gun;
   [SerializeField] GameObject Crossbow;
+
+
+  [SerializeField] Animator Anim;
 
 
 
@@ -79,6 +84,7 @@ public class Inventory : MonoBehaviour
     InventoryActive = false;
     Cursor.visible = false;
     MyPlayer = GetComponent<AudioSource>();
+
 
     //Apples
     AppleImage1.gameObject.SetActive(false);
@@ -467,35 +473,49 @@ public class Inventory : MonoBehaviour
   {
     PlayerArms.gameObject.SetActive(true);
     Knife.gameObject.SetActive(true);
+    Anim.SetBool("Melee", true);
     MyPlayer.clip = WeaponChange;
     MyPlayer.Play();
+    SaveScript.HaveKnife = true;
+    SaveScript.HaveBat = false;
+    SaveScript.HaveAxe = false;
   }
   public void AssignBat()
   {
     PlayerArms.gameObject.SetActive(true);
     Bat.gameObject.SetActive(true);
+    Anim.SetBool("Melee", true);
     MyPlayer.clip = WeaponChange;
     MyPlayer.Play();
+    SaveScript.HaveKnife = false;
+    SaveScript.HaveBat = true;
+    SaveScript.HaveAxe = false;
   }
   public void AssignAxe()
   {
     PlayerArms.gameObject.SetActive(true);
     Axe.gameObject.SetActive(true);
+    Anim.SetBool("Melee", true);
     MyPlayer.clip = WeaponChange;
     MyPlayer.Play();
+    SaveScript.HaveKnife = false;
+    SaveScript.HaveBat = false;
+    SaveScript.HaveAxe = true;
   }
   public void AssignGun()
   {
     PlayerArms.gameObject.SetActive(true);
     Gun.gameObject.SetActive(true);
-    MyPlayer.clip = WeaponChange;
+    Anim.SetBool("Melee", false);
+    MyPlayer.clip = GunShot;
     MyPlayer.Play();
   }
   public void AssignCrossbow()
   {
     PlayerArms.gameObject.SetActive(true);
     Crossbow.gameObject.SetActive(true);
-    MyPlayer.clip = WeaponChange;
+    Anim.SetBool("Melee", false);
+    MyPlayer.clip = ArrowShot;
     MyPlayer.Play();
   }
 
