@@ -24,6 +24,7 @@ public class EnemyAttack : MonoBehaviour
   [SerializeField] float AttackRotateSpeed = 2.0f;
   [SerializeField] float CheckTime = 3.0f;
   [SerializeField] GameObject ChaseMusic;
+  [SerializeField] GameObject HurtUI;
 
 
 
@@ -75,6 +76,7 @@ public class EnemyAttack : MonoBehaviour
         Nav.acceleration = 24;
         Nav.SetDestination(Player.position);
         Nav.speed = ChaseSpeed;
+        HurtUI.gameObject.SetActive(false);
       }
       if (DistanceToPlayer < AttackDistance - 0.5f)
       {
@@ -82,6 +84,8 @@ public class EnemyAttack : MonoBehaviour
         Debug.Log("I am attacking");
         Anim.SetInteger("State", 3);
         Nav.acceleration = 180;
+        HurtUI.gameObject.SetActive(true);
+
         Vector3 Pos = (Player.position - Enemy.transform.position).normalized;
         Quaternion PosRotation = Quaternion.LookRotation(new Vector3(Pos.x, 0, Pos.z));
         Enemy.transform.rotation = Quaternion.Slerp(Enemy.transform.rotation, PosRotation, Time.deltaTime * AttackRotateSpeed);
