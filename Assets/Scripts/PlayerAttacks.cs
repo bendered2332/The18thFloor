@@ -5,46 +5,70 @@ using UnityEngine;
 public class PlayerAttacks : MonoBehaviour
 {
   private Animator Anim;
+  private float AttackStamina;
+  [SerializeField] float MaxAttackStamina = 10;
+  [SerializeField] float AttackDrain = 2;
+  [SerializeField] float AttackRefill = 1;
   // Start is called before the first frame update
   void Start()
   {
     Anim = GetComponent<Animator>();
+    AttackStamina = MaxAttackStamina;
+
   }
 
   // Update is called once per frame
   void Update()
   {
-    if (SaveScript.HaveKnife == true)
+    Debug.Log(AttackStamina);
+    if (AttackStamina < MaxAttackStamina)
     {
-      if (Input.GetKeyDown(KeyCode.Mouse0))
-      {
-        Anim.SetTrigger("KnifeLMB");
-      }
-      if (Input.GetKeyDown(KeyCode.Mouse1))
-      {
-        Anim.SetTrigger("KnifeRMB");
-      }
+      AttackStamina += AttackRefill * Time.deltaTime;
     }
-    if (SaveScript.HaveBat == true)
+    if (AttackStamina <= 0.1)
     {
-      if (Input.GetKeyDown(KeyCode.Mouse0))
-      {
-        Anim.SetTrigger("BatLMB");
-      }
-      if (Input.GetKeyDown(KeyCode.Mouse1))
-      {
-        Anim.SetTrigger("BatRMB");
-      }
+      AttackStamina = 0.1f;
     }
-    if (SaveScript.HaveAxe == true)
+    if (AttackStamina > 3.0f)
     {
-      if (Input.GetKeyDown(KeyCode.Mouse0))
+      if (SaveScript.HaveKnife == true)
       {
-        Anim.SetTrigger("AxeLMB");
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+          Anim.SetTrigger("KnifeLMB");
+          AttackStamina -= AttackDrain;
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+          Anim.SetTrigger("KnifeRMB");
+          AttackStamina -= AttackDrain;
+        }
       }
-      if (Input.GetKeyDown(KeyCode.Mouse1))
+      if (SaveScript.HaveBat == true)
       {
-        Anim.SetTrigger("AxeRMB");
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+          Anim.SetTrigger("BatLMB");
+          AttackStamina -= AttackDrain;
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+          Anim.SetTrigger("BatRMB");
+          AttackStamina -= AttackDrain;
+        }
+      }
+      if (SaveScript.HaveAxe == true)
+      {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+          Anim.SetTrigger("AxeLMB");
+          AttackStamina -= AttackDrain;
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+          Anim.SetTrigger("AxeRMB");
+          AttackStamina -= AttackDrain;
+        }
       }
     }
   }

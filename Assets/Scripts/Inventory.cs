@@ -149,6 +149,9 @@ public class Inventory : MonoBehaviour
         InventoryActive = true;
         Time.timeScale = 0f;
         Cursor.visible = true;
+        SaveScript.HaveKnife = false;
+        SaveScript.HaveBat = false;
+        SaveScript.HaveAxe = false;
       }
       else if (InventoryActive == true)
       {
