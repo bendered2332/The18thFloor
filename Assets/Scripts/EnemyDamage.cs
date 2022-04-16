@@ -34,9 +34,19 @@ public class EnemyDamage : MonoBehaviour
   {
     if (other.gameObject.CompareTag("Knife"))
     {
-      EnemyHealth -= 25;
+      EnemyHealth -= 20;
       MyPlayer.Play();
       StabPlayer.Play();
+    }
+    if (other.gameObject.CompareTag("Bat"))
+    {
+      EnemyHealth -= 10;
+      MyPlayer.Play();
+    }
+    if (other.gameObject.CompareTag("Axe"))
+    {
+      EnemyHealth -= 25;
+      MyPlayer.Play();
     }
   }
 }
