@@ -6,7 +6,6 @@ public class EnemyDamage : MonoBehaviour
 {
   public int EnemyHealth = 100;
   private AudioSource MyPlayer;
-  [SerializeField] GameObject WinScreen;
   [SerializeField] AudioSource StabPlayer;
   private Animator Anim;
   private bool HasDied = false;
@@ -16,7 +15,6 @@ public class EnemyDamage : MonoBehaviour
   {
     MyPlayer = GetComponent<AudioSource>();
     Anim = GetComponentInParent<Animator>();
-    WinScreen.gameObject.SetActive(false);
   }
 
   // Update is called once per frame
@@ -28,10 +26,6 @@ public class EnemyDamage : MonoBehaviour
       {
         Anim.SetTrigger("Death");
         HasDied = true;
-        WinScreen.gameObject.SetActive(true);
-        Time.timeScale = 0f;
-        Cursor.visible = true;
-
       }
     }
   }

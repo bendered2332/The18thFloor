@@ -7,7 +7,10 @@ public class SceneSequence : MonoBehaviour
 
 
   public GameObject Cam1;
-  public GameObject Player;
+  public GameObject Cam2;
+  public GameObject Cam3;
+  public GameObject Cam4;
+  public GameObject Cam5;
   public GameObject IntroDialogue;
   public GameObject Canvas;
 
@@ -15,18 +18,31 @@ public class SceneSequence : MonoBehaviour
   void Start()
   {
     StartCoroutine(TheSequence());
-    Player.SetActive(false);
+    Cam5.SetActive(false);
     Canvas.SetActive(false);
     IntroDialogue.SetActive(true);
   }
 
   IEnumerator TheSequence()
   {
-    yield return new WaitForSeconds(6);
-    Player.SetActive(true);
+    yield return new WaitForSeconds(4);
+    Cam2.SetActive(true);
     Cam1.SetActive(false);
-    IntroDialogue.SetActive(false);
+
+    yield return new WaitForSeconds(4);
+    Cam3.SetActive(true);
+    Cam2.SetActive(false);
+
+    yield return new WaitForSeconds(4);
+    Cam4.SetActive(true);
+    Cam3.SetActive(false);
+
+    yield return new WaitForSeconds(4);
+    Cam5.SetActive(true);
     Canvas.SetActive(true);
+    IntroDialogue.SetActive(false);
+    Cam4.SetActive(false);
+
   }
 
 
