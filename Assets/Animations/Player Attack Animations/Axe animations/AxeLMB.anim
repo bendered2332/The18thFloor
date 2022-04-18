@@ -333,7 +333,11 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
+<<<<<<< HEAD
         time: 0.11666667
+=======
+        time: 0.15
+>>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -1413,7 +1417,11 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
+<<<<<<< HEAD
         time: 0.11666667
+=======
+        time: 0.15
+>>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
         value: 1
         inSlope: Infinity
         outSlope: Infinity

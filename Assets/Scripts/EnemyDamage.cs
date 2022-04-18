@@ -34,6 +34,7 @@ public class EnemyDamage : MonoBehaviour
   {
     if (other.gameObject.CompareTag("PKnife"))
     {
+<<<<<<< HEAD
       EnemyHealth -= 10;
       MyPlayer.Play();
       StabPlayer.Play();
@@ -45,9 +46,21 @@ public class EnemyDamage : MonoBehaviour
     }
     if (other.gameObject.CompareTag("PAxe"))
     {
+=======
+>>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
       EnemyHealth -= 20;
       MyPlayer.Play();
       StabPlayer.Play();
+    }
+    if (other.gameObject.CompareTag("Bat"))
+    {
+      EnemyHealth -= 10;
+      MyPlayer.Play();
+    }
+    if (other.gameObject.CompareTag("Axe"))
+    {
+      EnemyHealth -= 25;
+      MyPlayer.Play();
     }
   }
 }
