@@ -32,20 +32,9 @@ public class EnemyDamage : MonoBehaviour
 
   private void OnTriggerEnter(Collider other)
   {
-    if (other.gameObject.CompareTag("PKnife"))
+    if (other.gameObject.CompareTag("Knife"))
     {
-      EnemyHealth -= 10;
-      MyPlayer.Play();
-      StabPlayer.Play();
-    }
-    if (other.gameObject.CompareTag("PBat"))
-    {
-      EnemyHealth -= 15;
-      MyPlayer.Play();
-    }
-    if (other.gameObject.CompareTag("PAxe"))
-    {
-      EnemyHealth -= 20;
+      EnemyHealth -= 25;
       MyPlayer.Play();
       StabPlayer.Play();
     }

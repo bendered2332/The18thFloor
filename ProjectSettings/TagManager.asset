@@ -14,9 +14,6 @@ TagManager:
   - Magazine
   - Bolt
   - RoomKey
-  - PKnife
-  - PBat
-  - PAxe
   layers:
   - Default
   - TransparentFX

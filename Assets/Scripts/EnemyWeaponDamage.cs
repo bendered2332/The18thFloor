@@ -9,7 +9,6 @@ public class EnemyWeaponDamage : MonoBehaviour
   [SerializeField] Animator HurtAnim;
   [SerializeField] AudioSource MyPlayer;
   private bool HitActive = false;
-  [SerializeField] GameObject FPSArms;
 
   private void OnTriggerEnter(Collider other)
   {
@@ -22,7 +21,6 @@ public class EnemyWeaponDamage : MonoBehaviour
         SaveScript.PlayerHealth -= WeaponDamage;
         SaveScript.HealthChanged = true;
         MyPlayer.Play();
-        FPSArms.GetComponent<PlayerAttacks>().AttackStamina -= 3;
       }
     }
   }
