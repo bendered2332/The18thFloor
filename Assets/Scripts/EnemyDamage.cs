@@ -35,6 +35,7 @@ public class EnemyDamage : MonoBehaviour
     if (other.gameObject.CompareTag("PKnife"))
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       EnemyHealth -= 10;
       MyPlayer.Play();
       StabPlayer.Play();
@@ -46,6 +47,8 @@ public class EnemyDamage : MonoBehaviour
     }
     if (other.gameObject.CompareTag("PAxe"))
     {
+=======
+>>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
 =======
 >>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
       EnemyHealth -= 20;

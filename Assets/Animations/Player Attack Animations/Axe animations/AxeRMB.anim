@@ -547,7 +547,11 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
 <<<<<<< HEAD
+<<<<<<< HEAD
         time: 0.45
+=======
+        time: 0.5
+>>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
 =======
         time: 0.5
 >>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
@@ -560,7 +564,11 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
 <<<<<<< HEAD
+<<<<<<< HEAD
         time: 0.76666665
+=======
+        time: 0.8333333
+>>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
 =======
         time: 0.8333333
 >>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
@@ -2370,7 +2378,11 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
 <<<<<<< HEAD
+<<<<<<< HEAD
         time: 0.45
+=======
+        time: 0.5
+>>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
 =======
         time: 0.5
 >>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
@@ -2383,7 +2395,11 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
 <<<<<<< HEAD
+<<<<<<< HEAD
         time: 0.76666665
+=======
+        time: 0.8333333
+>>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
 =======
         time: 0.8333333
 >>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")

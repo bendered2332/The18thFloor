@@ -334,7 +334,11 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
 <<<<<<< HEAD
+<<<<<<< HEAD
         time: 0.11666667
+=======
+        time: 0.15
+>>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
 =======
         time: 0.15
 >>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
@@ -1418,7 +1422,11 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
 <<<<<<< HEAD
+<<<<<<< HEAD
         time: 0.11666667
+=======
+        time: 0.15
+>>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
 =======
         time: 0.15
 >>>>>>> parent of e0917a9 (Revert "Multiple changes- very close to end")
